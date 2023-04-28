@@ -1,2 +1,3 @@
 # SolarSystemSim
-A gravitySim
+A gravitySim 
+Testing Some integration algorithms
