@@ -1,17 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class StatsUI : MonoBehaviour
 {
-    public Universe universe;
     public TextMeshProUGUI Energy;
     public TextMeshProUGUI Momentum;
 
     void Update(){
-        Energy.SetText($"Energy: {universe.Energy.ToString("0.00000")} J");
-        Momentum.SetText($"Momentum: {VectorToString(universe.Momentum)}");
+        Energy.SetText($"Energy: {NBodySimulation.Instance.Energy.ToString("0.00000")} J");
+        Momentum.SetText($"Momentum: {VectorToString(NBodySimulation.Instance.Momentum)}");
     }
 
     string VectorToString(Vector3 input){
