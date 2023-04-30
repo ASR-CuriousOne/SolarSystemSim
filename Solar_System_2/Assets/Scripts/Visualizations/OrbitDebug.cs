@@ -28,7 +28,7 @@ public class OrbitDebug : MonoBehaviour
 
     private void Update()
     {
-         DrawOrbit();       
+        DrawOrbit();       
     }
 
     void DrawOrbit()

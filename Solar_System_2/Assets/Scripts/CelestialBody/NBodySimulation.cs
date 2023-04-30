@@ -27,23 +27,22 @@ public class NBodySimulation : MonoBehaviour
     //Enable is called
     public void OnEnable()
     {
-        if(Instance != null && (Instance != this)) Destroy(this);
-        else Instance = this;
+        
     }
 
     //Awake is called when scene is loaded
-    void Awake()
+    public void Awake()
     {
-        if(Instance != null && !(Instance != this)) Destroy(this);
+        if(Instance != null && (Instance != this)) Destroy(this);
         else Instance = this;
-
-        Initialize();
+        
+        
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        Initialize();
     }
 
     // Update is called once per frame
@@ -113,8 +112,7 @@ public class NBodySimulation : MonoBehaviour
 
             for (int i = 0; i < numOfBodies; i++)
                 {
-                    Vector3 newPos = m_positions[i] + m_velocities[i] * delta_time + ((4*CurrAccs[i] - PrevAccs[i]) * delta_time * delta_time)/6;                    
-                    //Debug.Log(CurrAccs[i] * 100);
+                    Vector3 newPos = m_positions[i] + m_velocities[i] * delta_time + ((4*CurrAccs[i] - PrevAccs[i]) * delta_time * delta_time)/6.0f;
                     m_prevPositions[i] = m_positions[i];
                     m_positions[i] = newPos;
                 }
@@ -123,9 +121,9 @@ public class NBodySimulation : MonoBehaviour
 
             for (int i = 0; i < numOfBodies; i++){
 
-                m_positions[i] = m_prevPositions[i] + m_velocities[i] * delta_time + ((2*CurrAccs[i] + NewAccs[i]) * delta_time * delta_time)/6;
+                m_positions[i] = m_prevPositions[i] + m_velocities[i] * delta_time + ((2.0f*CurrAccs[i] + NewAccs[i]) * (delta_time * delta_time))/6.0f;
 
-                m_velocities[i] += (2*CurrAccs[i] + NewAccs[i]) * delta_time/3;
+                m_velocities[i] += (2.0f*CurrAccs[i] + NewAccs[i]) * delta_time/3.0f;
             }   
     }
 
@@ -176,7 +174,7 @@ public class NBodySimulation : MonoBehaviour
                 newEnergy += -G * m_masses[i]*m_masses[j]/Dis;
             }
 
-            newEnergy += 0.5f * G * m_masses[i] * m_velocities[i].sqrMagnitude;
+            newEnergy += 0.5f * m_masses[i] * m_velocities[i].sqrMagnitude;
         }
 
         Energy = newEnergy;

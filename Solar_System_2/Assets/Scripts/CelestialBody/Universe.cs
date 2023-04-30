@@ -12,15 +12,23 @@ public class Universe : MonoBehaviour
     public static Universe Instance{get; private set;}
 
 
-    void OnEnable()
+    private void OnEnable()
     {
-        if(Instance != null && !(Instance != this)) Destroy(this);
-        else Instance = this;
+        
     }
-    // Start is called before the first frame update
-    void Awake()
+
+    //Awake is called when scene is loaded
+    private void Awake()
     {
+        if(Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
+
         Initialize();
+    }
+
+    // Start is called before the first frame update
+    private void Start(){
+        
     }
 
     //

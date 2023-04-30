@@ -10,7 +10,7 @@ public class NBodySimulationEditor : Editor
         base.OnInspectorGUI();
         
         if(GUILayout.Button("Make Instance")){
-            nBodySimulation.OnEnable();
+            nBodySimulation.Awake();
         }
     }
 
