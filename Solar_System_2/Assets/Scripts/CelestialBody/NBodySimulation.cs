@@ -9,7 +9,7 @@ public class NBodySimulation : MonoBehaviour
     //SimulationConstants
     public float G = 6;
     public int TimeWarp = 1;
-    public float Delta_time = 0.01f;
+    public float Delta_time = 0.02f;
     private float delta_time = 0.01f;
 
     //Stats
