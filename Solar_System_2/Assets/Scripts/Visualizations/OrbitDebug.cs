@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [ExecuteInEditMode]
@@ -9,7 +7,7 @@ public class OrbitDebug : MonoBehaviour
     public int numSteps = 1000;
     public float timestep = 0.1f;
     public bool UsePhysicsTimeStep;
-    public bool call;
+    private float G;
 
     public bool RelativeToBody;
     public CelestialBody CentralBody;
@@ -17,7 +15,7 @@ public class OrbitDebug : MonoBehaviour
     public float lineThickness = 100f;
     public bool UseThickLines = true;
 
-    public Universe universe = new Universe();
+    private CelestialBody[] m_allCelestialBodies;
 
 
     private void Start()
@@ -30,27 +28,24 @@ public class OrbitDebug : MonoBehaviour
 
     private void Update()
     {
-        if(call)
-            DrawOrbit();
-        
+        DrawOrbit();       
     }
 
     void DrawOrbit()
     {
-        CelestialBody[] allOtherBodies = FindObjectsOfType<CelestialBody>();
-       
-        var virtualBodies = new VirtualBody[allOtherBodies.Length];
-        var drawPoints = new Vector3[allOtherBodies.Length][];
+        m_allCelestialBodies = FindObjectsOfType<CelestialBody>();
+        var virtualBodies = new VirtualBody[m_allCelestialBodies.Length];
+        var drawPoints = new Vector3[m_allCelestialBodies.Length][];
 
         int refferenceFrameIndex = 0;
         Vector3 refferenceBodyInitialPosition = Vector3.zero;
 
-        for (int i = 0; i < allOtherBodies.Length; i++)
+        for (int i = 0; i < m_allCelestialBodies.Length; i++)
         {
-            virtualBodies[i] = new VirtualBody(allOtherBodies[i]);
+            virtualBodies[i] = new VirtualBody(m_allCelestialBodies[i]);
             drawPoints[i] = new Vector3[numSteps];
 
-            if (allOtherBodies[i] == CentralBody && RelativeToBody)
+            if (m_allCelestialBodies[i] == CentralBody && RelativeToBody)
             {
                 refferenceFrameIndex = i;
                 refferenceBodyInitialPosition = virtualBodies[i].position;
@@ -94,11 +89,11 @@ public class OrbitDebug : MonoBehaviour
 
         for (int bodyIndex = 0; bodyIndex < virtualBodies.Length; bodyIndex++)
         {
-            var pathColor = allOtherBodies[bodyIndex].BaseColour;
+            var pathColor = m_allCelestialBodies[bodyIndex].BaseColour;
             
            
            
-                var lineRenderer = allOtherBodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
+                var lineRenderer = m_allCelestialBodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer>();
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = drawPoints[bodyIndex].Length;
                 lineRenderer.SetPositions(drawPoints[bodyIndex]);
@@ -112,6 +107,7 @@ public class OrbitDebug : MonoBehaviour
 
 
     }
+    
     void HideOrbits()
     {
         CelestialBody[] bodies = FindObjectsOfType<CelestialBody>();
@@ -124,13 +120,11 @@ public class OrbitDebug : MonoBehaviour
         }
     }
 
-
-
     private void OnValidate()
     {
         if (UsePhysicsTimeStep)
         {
-            timestep = universe.Delta_time;
+            timestep = NBodySimulation.Instance.Delta_time;
         }
     }
 
@@ -145,17 +139,10 @@ public class OrbitDebug : MonoBehaviour
 
             Vector3 forceDir = (virtualBodies[j].position - virtualBodies[i].position);
             float sqrDis = forceDir.sqrMagnitude;
-            accerlation += forceDir.normalized * (universe.G * virtualBodies[j].mass )/ sqrDis;
+            accerlation += forceDir.normalized * (NBodySimulation.Instance.G * virtualBodies[j].mass )/ sqrDis;
         }
         return accerlation;
     }
-
-
-
-
-
-
-
 
     class VirtualBody
     {

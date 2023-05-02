@@ -1,13 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OrbitDrawer : MonoBehaviour
 {
     Vector3[][] drawPoints;
     
-    Universe universe;
+    private CelestialBody[] m_allCelestialBodies;
 
+    //SimulationVariables
+    private float[] m_masses;
+    private Vector3[] m_velocities;
+    private Vector3[] m_positions;
+    private Vector3[] m_prevPositions;
+    private float[,] m_massratios;
+    private int numOfBodies;
 
     // Start is called before the first frame update
     void Start()
@@ -15,16 +20,9 @@ public class OrbitDrawer : MonoBehaviour
         
     }
 
-   /* void Initialize(){
-        universe = FindObjectOfType<Universe>();
-
-        drawPoints = new Vector3[universe.m_allCelestialBodies.Length][];
-
-        for (int i = 0; i < universe.m_allCelestialBodies.Length; i++)
-        {
-            drawPoints[i] = new Vector3[];
-        }
-    }*/
+    void Initialize(){
+        m_allCelestialBodies = Universe.Instance.m_allCelestialBodies;
+    }
 
     
 }
