@@ -1,18 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+
+public class UILeenTween : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    [Header("Type of Animations")]
+    public TypeOfAnimation typeOfAnimation = TypeOfAnimation.None;
+
+    [Header("Animation Properties")]
+    // Translation
+    Vector3 Start;
+    Vector3 End;
+
+    void Animate(){
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+}
+
+public enum TypeOfAnimation {
+    None,
+    Translation,
+    Rotation,
+    Scale,
 }
