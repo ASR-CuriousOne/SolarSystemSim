@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-
 public class UILeenTween : MonoBehaviour
 {
     [Header("Type of Animations")]
@@ -8,11 +7,26 @@ public class UILeenTween : MonoBehaviour
 
     [Header("Animation Properties")]
     // Translation
-    Vector3 Start;
-    Vector3 End;
+    public Vector3 Start;
+    public Vector3 End;
+    public AnimationCurve animationCurve;
 
-    void Animate(){
+    public GameObject toggle;
+
+    public void Animate(){
         
+        
+    }
+
+    public void OpenAndClosingAnimation(bool TobeOpenedOrClosed){
+        if(TobeOpenedOrClosed) {
+            LeanTween.move(gameObject.GetComponent<RectTransform>(),Start,0.69f);
+            LeanTween.scaleX(toggle,-1,0.69f);
+            }
+        else {
+            LeanTween.move(gameObject.GetComponent<RectTransform>(),End,.69f);
+            LeanTween.scaleX(toggle,1,0.69f);
+        }
     }
 
 

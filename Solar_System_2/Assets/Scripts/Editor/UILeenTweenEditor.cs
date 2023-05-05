@@ -16,6 +16,8 @@ public class UILeenTweenEditor : Editor
         if(uILeenTween.typeOfAnimation is TypeOfAnimation.Translation) DrawTranslationFields();
         if(uILeenTween.typeOfAnimation is TypeOfAnimation.Rotation) DrawRotationFields();
         if(uILeenTween.typeOfAnimation is TypeOfAnimation.Scale) DrawScaleFields();
+
+        if(GUILayout.Button("Animate")) uILeenTween.Animate();
     }
 
     private void DrawTranslationFields(){
