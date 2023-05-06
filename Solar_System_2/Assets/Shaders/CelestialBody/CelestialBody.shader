@@ -2,7 +2,8 @@
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _MainTex ("Surface", 2D) = "white" {}
+        _BaseColour ("Base Colour", Color) = (1,1,1,1)
     }
     SubShader
     {
@@ -34,22 +35,20 @@
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _BaseColour;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
+                fixed4 col = _BaseColour;
                 return col;
             }
             ENDCG

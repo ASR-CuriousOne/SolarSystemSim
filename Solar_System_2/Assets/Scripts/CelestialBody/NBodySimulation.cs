@@ -9,7 +9,7 @@ public class NBodySimulation : MonoBehaviour
     //SimulationConstants
     public float G = 6;
     public int TimeWarp = 1;
-    public float Delta_time = 0.01f;
+    public float Delta_time = 0.02f;
     private float delta_time = 0.01f;
 
     //Stats
@@ -24,19 +24,18 @@ public class NBodySimulation : MonoBehaviour
     private float[,] m_massratios;
     private int numOfBodies;
 
+    
     //Enable is called
     public void OnEnable()
     {
-        
     }
 
     //Awake is called when scene is loaded
     public void Awake()
     {
         if(Instance != null && (Instance != this)) Destroy(this);
-        else Instance = this;
-        
-        
+        else Instance = this;      
+
     }
 
     // Start is called before the first frame update
