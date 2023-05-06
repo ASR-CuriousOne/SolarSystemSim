@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI background
+  m_Name: UIBGSideMenu
   m_Shader: {fileID: -6465566751694194690, guid: e18f304cfd4149e498e5a5fd9d0f38f9,
     type: 3}
   m_ShaderKeywords: 
@@ -83,7 +83,7 @@ Material:
     - _PaddingColor: {r: 0, g: 0.0074975006, b: 0.16037738, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _bgColor: {r: 0, g: 0, b: 0, a: 1}
-    - _paddingColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
+    - _paddingColor: {r: 0.2627451, g: 0.2627451, b: 0.2627451, a: 1}
 --- !u!114 &5773676779670924251
 MonoBehaviour:
   m_ObjectHideFlags: 11

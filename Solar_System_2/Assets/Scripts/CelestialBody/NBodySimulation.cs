@@ -24,19 +24,18 @@ public class NBodySimulation : MonoBehaviour
     private float[,] m_massratios;
     private int numOfBodies;
 
+    
     //Enable is called
     public void OnEnable()
     {
-        
     }
 
     //Awake is called when scene is loaded
     public void Awake()
     {
         if(Instance != null && (Instance != this)) Destroy(this);
-        else Instance = this;
-        
-        
+        else Instance = this;      
+
     }
 
     // Start is called before the first frame update
