@@ -100,7 +100,7 @@ public class NBodySimulation : MonoBehaviour
                 m_massratios[j,i] = 1/ m_massratios[i,j];
             }
         }
-        delta_time = Delta_time;
+        delta_time = 0.0f;
     }
 
     //Simulate celestial bodies 
