@@ -190,4 +190,8 @@ public class NBodySimulation : MonoBehaviour
         Momentum = newMomentum;
     }
 
+    public void SetWarpSpeed(float warpSpeed){
+        TimeWarp = (int)(warpSpeed * 1680 + 10);
+    }
+
 }
