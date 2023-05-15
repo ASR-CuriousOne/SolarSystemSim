@@ -24,6 +24,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_OFF
+  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -116,9 +117,9 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 0
     - _Shininess: 0
-    - _Smoothness: 0.15
+    - _Smoothness: 0
     - _SmoothnessSource: 0
-    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTextureChannel: 1
     - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -133,10 +134,10 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.034843344, g: 0.15429996, b: 0.8207547, a: 1}
-    - _Color: {r: 0.034843344, g: 0.15429991, b: 0.8207547, a: 1}
+    - _BaseColor: {r: 0.18195976, g: 0.45409715, b: 0.8207547, a: 1}
+    - _Color: {r: 0.18195972, g: 0.45409715, b: 0.8207547, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.099, g: 0.099, b: 0.099, a: 0}
+    - _SpecColor: {r: 0.4528302, g: 0.44215024, b: 0.44215024, a: 0}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

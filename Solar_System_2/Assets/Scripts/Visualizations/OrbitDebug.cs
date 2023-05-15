@@ -120,6 +120,12 @@ public class OrbitDebug : MonoBehaviour
         }
     }
 
+    public void SetLineThickness(float linethickness) => lineThickness = linethickness;
+
+    public void SetNumStep(float numSteps){
+        this.numSteps = (int)(numSteps*2990 + 10);
+    }
+
     private void OnValidate()
     {
         if (UsePhysicsTimeStep)
