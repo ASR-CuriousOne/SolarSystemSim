@@ -49,6 +49,8 @@ public class Universe : MonoBehaviour
         
     }
 
-   
+    public void CreateCelestialBody(Vector3 postion,float radius, Color BaseColor,string name){
+        GameObject gameObject = new GameObject(name,typeof(CelestialBody));
+    }
 
 }

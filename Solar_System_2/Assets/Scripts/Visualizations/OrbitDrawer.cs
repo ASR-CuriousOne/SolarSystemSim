@@ -25,7 +25,7 @@ public class OrbitDrawer : MonoBehaviour
         Initialize();
     }
 
-    void Update(){
+    void LateUpdate(){
         DrawOrbits();        
     }
 
@@ -89,14 +89,21 @@ public class OrbitDrawer : MonoBehaviour
             {
                 drawPoints[i][step] = m_positions[i];
 
+                if(m_allCelestialBodies[i].IsAnchored) continue;
+
                 Vector3 newPos = m_positions[i] + m_velocities[i] * delta_time + ((4*CurrAccs[i] - PrevAccs[i]) * delta_time * delta_time)/6.0f;
                 m_prevPositions[i] = m_positions[i];
                 m_positions[i] = newPos;
             }
     
         Vector3[] NewAccs = CalculateAccelerations(m_positions);
-        for (int i = 0; i < numOfBodies; i++){
+
+        for (int i = 0; i < numOfBodies; i++)
+        {
+            if(m_allCelestialBodies[i].IsAnchored) continue;
+
             m_positions[i] = m_prevPositions[i] + m_velocities[i] * delta_time + ((2.0f*CurrAccs[i] + NewAccs[i]) * (delta_time * delta_time))/6.0f;
+
             m_velocities[i] += (2.0f*CurrAccs[i] + NewAccs[i]) * delta_time/3.0f;
         }
     }

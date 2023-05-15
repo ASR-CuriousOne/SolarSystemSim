@@ -1651,9 +1651,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mass: 0.1
-  m_velocity: {x: 0, y: 0, z: 7}
   BaseColour: {r: 0.7264151, g: 0.7161356, b: 0.7161356, a: 1}
   orbitThickness: 0.03
+  m_velocity: {x: 0, y: 0, z: -2.82}
+  IsAnchored: 0
 --- !u!114 &410483653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,8 +1696,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410483650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.64, y: 0, z: -0.18}
-  m_LocalScale: {x: 0.47000003, y: 0.47000003, z: 0.47000003}
+  m_LocalPosition: {x: 413.4, y: 0, z: 0.02}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1196175446}
@@ -2640,8 +2641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   G: 2.89
-  TimeWarp: 100
-  Delta_time: 0.0002
+  TimeWarp: 10
+  Delta_time: 0.0009
   Energy: 0
   Momentum: {x: 0, y: 0, z: 0}
 --- !u!114 &802912142
@@ -2656,8 +2657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf081e8a3c9bf74cb6476af80513ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delta_time: 0.01
-  numOfSteps: 1547
+  delta_time: 1
+  numOfSteps: 3000
   refrenceBody: {fileID: 0}
 --- !u!1 &880343950
 GameObject:
@@ -2692,9 +2693,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mass: 199
-  m_velocity: {x: 0, y: 0, z: 0}
   BaseColour: {r: 1, g: 0.946765, b: 0.3537736, a: 1}
   orbitThickness: 0.3
+  m_velocity: {x: 0, y: 0, z: 0}
+  IsAnchored: 1
 --- !u!114 &880343952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2750,7 +2752,7 @@ Transform:
   m_GameObject: {fileID: 880343950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.5, y: 5.5, z: 5.5}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 904781756}
@@ -5320,7 +5322,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 42
   orthographic: 0
   orthographic size: 5
@@ -5346,14 +5348,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605662612}
-  m_LocalRotation: {x: 0.12849866, y: -0.8511642, z: 0.24527359, w: 0.44592428}
-  m_LocalPosition: {x: 110.4, y: 82.1, z: 40.5}
+  m_LocalRotation: {x: -0.07843685, y: 0.8556038, z: -0.13606389, w: -0.49323058}
+  m_LocalPosition: {x: 1048.8667, y: 368.75473, z: 350.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 32.15, y: -124.7, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.345, y: -133.955, z: -5.175}
 --- !u!114 &1605662616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5394,7 +5396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605662612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
   m_Name: 
@@ -6434,9 +6436,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mass: 10
-  m_velocity: {x: 0, y: 0, z: 2.9}
   BaseColour: {r: 0.18396229, g: 0.1963621, b: 1, a: 1}
   orbitThickness: 0.3
+  m_velocity: {x: 0, y: 0, z: -1.2}
+  IsAnchored: 0
 --- !u!114 &1901715697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6478,8 +6481,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901715694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.9, y: 0, z: 0}
-  m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
+  m_LocalPosition: {x: 400, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1903402481}
@@ -6838,7 +6841,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9977497, g: 1, b: 0.8392157, a: 1}
-  m_Intensity: 5000
+  m_Intensity: 500000
   m_Range: 3000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

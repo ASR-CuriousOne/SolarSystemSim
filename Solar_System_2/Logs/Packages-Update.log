@@ -61,3 +61,13 @@ The following packages were updated:
   com.unity.test-framework from version 1.1.22 to 1.1.31
   com.unity.textmeshpro from version 2.1.1 to 3.0.6
   com.unity.timeline from version 1.2.18 to 1.6.4
+
+=== Mon May 15 09:23:54 2023
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 2.0.3 to 2.0.4
+  com.unity.ide.rider from version 3.0.20 to 3.0.21
+  com.unity.timeline from version 1.6.4 to 1.6.5

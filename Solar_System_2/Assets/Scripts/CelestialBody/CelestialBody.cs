@@ -6,13 +6,15 @@ public class CelestialBody : MonoBehaviour
     SphericalMesh m_sphereMesh;
     LineRenderer m_orbitLine;
 
+    [Header("Body Properties")]
     public float m_mass  = 1;
+    public Color BaseColour = new Color(0,0,0,1);
+    public float orbitThickness = .3f;
 
     public Vector3 m_velocity = Vector3.zero;    
 
-    public Color BaseColour = new Color(0,0,0,1);
-
-    public float orbitThickness = .3f;
+    [Header("Special Attributes")]
+    public bool IsAnchored;
 
     private void Awake()
     {
