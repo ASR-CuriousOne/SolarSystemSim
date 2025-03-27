@@ -11,6 +11,8 @@ public class OrbitDrawer : MonoBehaviour
     
     private CelestialBody[] m_allCelestialBodies;
 
+    public float thicknessMultiplier = 0.3f;
+
     //SimulationVariables
     private float G;
     private float[] m_masses;
@@ -78,7 +80,7 @@ public class OrbitDrawer : MonoBehaviour
 
         for (int i = 0; i < numOfBodies; i++)
         {
-            m_allCelestialBodies[i].UpdateOrbit(drawPoints[i]);
+            m_allCelestialBodies[i].UpdateOrbit(drawPoints[i],thicknessMultiplier);
         }
     }
 
@@ -127,5 +129,13 @@ public class OrbitDrawer : MonoBehaviour
         return Accelerations;
     }
 
-    
+    public void SetLineThickness(float thickness)
+    {
+        thicknessMultiplier = thickness;
+    }
+
+    public void SetNumberOfSteps(float numberOfSteps) {
+        numOfSteps = (int)(3000 * numberOfSteps);    
+    }
+
 }

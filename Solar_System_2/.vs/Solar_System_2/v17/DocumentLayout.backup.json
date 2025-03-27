@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|d:\\projects\\unityprojects\\solarsystemsim\\solar_system_2\\assets\\shaders\\celestialbody\\celestialbody.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|solutionrelative:assets\\shaders\\celestialbody\\celestialbody.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|d:\\projects\\unityprojects\\solarsystemsim\\solar_system_2\\assets\\scripts\\visualizations\\orbitdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\visualizations\\orbitdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\assets\\scripts\\celestialbody\\celestialbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\celestialbody\\celestialbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\assets\\scripts\\celestialbody\\nbodysimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B91FAC1-3B5D-F43A-252E-DAB46F076630}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\celestialbody\\nbodysimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CelestialBody.shader",
+              "DocumentMoniker": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Shaders\\CelestialBody\\CelestialBody.shader",
+              "RelativeDocumentMoniker": "Assets\\Shaders\\CelestialBody\\CelestialBody.shader",
+              "ToolTip": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Shaders\\CelestialBody\\CelestialBody.shader",
+              "RelativeToolTip": "Assets\\Shaders\\CelestialBody\\CelestialBody.shader",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-03-27T06:34:34.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CelestialBody.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\CelestialBody\\CelestialBody.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CelestialBody\\CelestialBody.cs",
+              "ToolTip": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\CelestialBody\\CelestialBody.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CelestialBody\\CelestialBody.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T06:16:22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrbitDrawer.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\Visualizations\\OrbitDrawer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Visualizations\\OrbitDrawer.cs",
+              "ToolTip": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\Visualizations\\OrbitDrawer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Visualizations\\OrbitDrawer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T06:15:14.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NBodySimulation.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\CelestialBody\\NBodySimulation.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CelestialBody\\NBodySimulation.cs",
+              "ToolTip": "D:\\Projects\\UnityProjects\\SolarSystemSim\\Solar_System_2\\Assets\\Scripts\\CelestialBody\\NBodySimulation.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CelestialBody\\NBodySimulation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T06:14:27.923Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ public class CelestialBody : MonoBehaviour
     [Header("Body Properties")]
     public float m_mass  = 1;
     public Color BaseColour = new Color(0,0,0,1);
-    public float orbitThickness = .3f;
+    public float orbitThickness = .9f;
 
     public Vector3 m_velocity = Vector3.zero;    
 
@@ -52,9 +52,9 @@ public class CelestialBody : MonoBehaviour
         transform.position = position;
     }
 
-    public void UpdateOrbit(Vector3[] orbitPoints){
+    public void UpdateOrbit(Vector3[] orbitPoints,float thicknessMultiplier){
         m_orbitLine.positionCount = orbitPoints.Length;
-        m_orbitLine.widthMultiplier = orbitThickness;
+        m_orbitLine.widthMultiplier = orbitThickness * thicknessMultiplier;
         m_orbitLine.SetPositions(orbitPoints);
         
     }
